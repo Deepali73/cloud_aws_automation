@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Provisioning | AWS Automation Love + Logic 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fce4ec, #f3e5f5);
+      font-family: 'Poppins', sans-serif;
+      color: #4a004a;
+      overflow-x: hidden;
+    }
+
+    .wave {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/wavecut.png');
+      background-repeat: repeat;
+      opacity: 0.07;
+      animation: waveFlow 60s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes waveFlow {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card,
+    .side-image {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 360px;
+      max-height: 600px;
+      overflow-y: auto;
+      box-shadow: 0 0 25px rgba(204, 153, 255, 0.4);
+      transition: transform 0.4s ease, background 0.4s;
+      opacity: 0;
+      animation: fadeInCard 1.5s ease forwards;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .card:hover,
+    .side-image:hover {
+      transform: scale(1.05);
+      background: rgba(186, 104, 200, 0.3);
+    }
+
+    @keyframes fadeInCard {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:nth-of-type(1) {
+      animation-delay: 1s;
+    }
+
+    .card:nth-of-type(2) {
+      animation-delay: 4s;
+    }
+
+    .card:nth-of-type(3) {
+      animation-delay: 7s;
+    }
+
+    .card:nth-of-type(4) {
+      animation-delay: 10s;
+    }
+
+    .card:nth-of-type(5) {
+      animation-delay: 13s;
+    }
+
+    .card:nth-of-type(6) {
+      animation-delay: 16s;
+    }
+
+    .card:nth-of-type(7) {
+      animation-delay: 19s;
+    }
+
+    .card:nth-of-type(8) {
+      animation-delay: 22s;
+    }
+
+    .side-image {
+      width: 100px;
+      height: auto;
+      padding: 1rem;
+      display: block;
+    }
+
+    .image-container {
+      position: fixed;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 1;
+    }
+
+    h1,
+    h2,
+    p,
+    ul,
+    code,
+    pre {
+      color: #4a004a;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      color: #9c27b0;
+      text-shadow: 0 0 15px #f8bbd0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ba68c8;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    ul {
+      list-style: circle;
+      padding-left: 1.5rem;
+    }
+
+    pre code {
+      display: block;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 1rem;
+      border-radius: 10px;
+      color: #6a1b9a;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wave"></div>
+
+  <div class="image-container">
+    <img src="https://img.icons8.com/color/96/amazon-web-services.png" class="side-image" alt="AWS Logo">
+    <img src="https://img.icons8.com/color/96/linux.png" class="side-image" alt="Linux Logo">
+    <img src="https://img.icons8.com/color/96/flask.png" class="side-image" alt="Flask Logo">
+  </div>
+
+  <div class="container">
+    <h1>⚡ Dynamic OS Provisioning</h1>
+    <h2>✨ one click & AWS EC2 Launch – code + cloud + crush = ❤️</h2>
+
+    <div class="card">
+      <p>✨ Socho ek button click kiya... aur OS AWS mein launch! Na credentials, na AWS Console. Just pure code wala pyaar 😍 + automation power ⚙️</p>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Step 1:</strong> Region selection + setup</p>
+      <p>Use boto3 in Python:</p>
+      <pre><code>boto3.resource("ec2", region_name="ap-south-1")</code></pre>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Step 2:</strong> Define your OS, Instance count, and key pairs!</p>
+      <ul>
+        <li>OS: Ubuntu, Amazon Linux, Windows etc</li>
+        <li>Count: Launch 1, 2, 5 servers in one click</li>
+        <li>Keys: Secret + Private 🔐 already inside project folder</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Step 3:</strong> Flask + Python = API call</p>
+      <p><strong>Why <code>boto3</code>? </strong><br>
+        It's the official AWS SDK for Python that lets your code talk directly to AWS services like EC2. Without it, no launch, no magic!
+      </p>
+      <p>First, import <code>boto3</code> — it's the heart of your automation 💓</p>
+      <pre><code>import boto3
+
+@app.route("/os")
+def osLaunch():
+    ec2 = boto3.resource("ec2", region_name="ap-south-1")
+    ec2.create_instances(
+        ImageId="ami-id",
+        InstanceType="t2.micro",
+        MinCount=1,
+        MaxCount=1
+    )</code></pre>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>AWS Config:</strong> Use <code>aws configure</code> to set credentials & region safely</p>
+      <p>One-time login. .aws folder hides your secret key + region!</p>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Bonus Touch:</strong> Let users choose count, region, instance – all via UI </p>
+      <p>Dropdowns, toggles, and buttons = total user power</p>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Result:</strong> Within seconds, EC2 instance gets launched </p>
+      <p>Automation + AWS = future-proof engineer </p>
+    </div>
+
+    <div class="card">
+      <p>✨ <strong>Why it’s cool:</strong> Manual login? Nah! Ek button. One love. One launch 💕</p>
+    </div>
+
+  </div>
+</body>
+
+</html>
